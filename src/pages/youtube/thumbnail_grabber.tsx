@@ -1,12 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import * as stylex from "@stylexjs/stylex";
 
-import { H1, Input, Label, H4 } from "@controlkit/ui";
+import { H1, Input, Label, H4, H3, Button } from "@controlkit/ui";
 
 const styles = stylex.create({
 	base: {
 		boxSizing: "border-box",
 		width: "100%",
+
+		maxWidth: "1280px",
 
 		margin: "0 auto",
 
@@ -15,8 +18,16 @@ const styles = stylex.create({
 		paddingRight: "2rem",
 
 		paddingLeft: "2rem",
+	},
 
-		// paddingLeft: "calc(320px + 2rem)",
+	container: {
+		padding: "0 1rem",
+	},
+
+	maxWidth: {
+		maxWidth: "100%",
+		borderRadius: "0.25rem",
+		paddingBottom: "1rem",
 	},
 
 	cell_outline: {
@@ -29,6 +40,20 @@ const styles = stylex.create({
 		alignContent: "center",
 		background: "var(--background-100)",
 		maxWidth: "100%",
+	},
+
+	img_wrapper: {
+		margin: "0 auto",
+		width: "100%",
+		display: "grid",
+		justifyContent: "center",
+		justifyItems: "center",
+		padding: "1rem 0",
+	},
+
+	img_title: {
+		textAlign: "center",
+		paddingBottom: "0.5rem",
 	},
 
 	img: {
@@ -56,11 +81,7 @@ const YOUTUBE_THUMBNAIL_SIZES: Record<
 		url: (id) => `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
 		size: "1280x720",
 	},
-	default: {
-		title: "Default",
-		url: (id) => `https://img.youtube.com/vi/${id}/default.jpg`,
-		size: "120x90",
-	},
+
 	standard: {
 		title: "Standard Definition",
 		url: (id) => `https://img.youtube.com/vi/${id}/sddefault.jpg`,
@@ -75,6 +96,11 @@ const YOUTUBE_THUMBNAIL_SIZES: Record<
 		title: "Medium Quality",
 		url: (id) => `https://img.youtube.com/vi/${id}/mqdefault.jpg`,
 		size: "320x180",
+	},
+	default: {
+		title: "Default",
+		url: (id) => `https://img.youtube.com/vi/${id}/default.jpg`,
+		size: "120x90",
 	},
 	thumbnail1: {
 		title: "Thumbnail 1",
@@ -121,13 +147,49 @@ export default function YoutubeThumbnailGrabber() {
 
 	const [type, setType] = useState<"video" | "short">("video");
 
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	const [info, setInfo] = useState<any | null>(null);
+
+	function getVideoInfoFromOEmbed(video_id_arg: string): void {
+		fetch(
+			`https://www.youtube.com/oembed?format=json&url=https://www.youtube.com/watch?v=${video_id_arg}`,
+		)
+			.then((response) => {
+				response.json().then((data) => {
+					// console.log(data);
+					setInfo(data);
+				});
+			})
+			.catch((error) => {
+				console.warn("Failed to fetch video info - ", error);
+			});
+	}
+
+	function downloadImage(url: string, title: string) {
+		try {
+			fetch(url)
+				.then((response) => response.blob())
+				.then((blob) => {
+					const objectUrl = URL.createObjectURL(blob);
+					const link = document.createElement("a");
+					link.href = objectUrl;
+					link.download = title;
+					document.body.appendChild(link);
+					link.click();
+					document.body.removeChild(link);
+					URL.revokeObjectURL(objectUrl);
+				})
+				.catch((error) => {
+					console.warn("Failed to download image - ", error);
+				});
+		} catch (error) {
+			console.warn("Failed to download image - ", error);
+		}
+	}
+
 	return (
 		<div {...stylex.props(styles.base)}>
-			<div
-				style={{
-					padding: "0 1rem",
-				}}
-			>
+			<div {...stylex.props(styles.container)}>
 				<H1>Youtube Thumbnail Grabber</H1>
 
 				<br />
@@ -138,45 +200,66 @@ export default function YoutubeThumbnailGrabber() {
 					onChange={(e) => {
 						setUrl(e.target.value);
 
-						if (e.target.value.includes("/shorts/")) {
-							// const url = new URL(e.target.value);
-							const url = e.target.value;
-							const videoID = url.substring(
-								url.lastIndexOf("/shorts/") + 8,
-								url.length,
-							);
-							setType("short");
-
-							console.log(videoID);
-							if (videoID) setID(videoID);
-						} else {
-							const url = new URL(e.target.value);
-							const searchParams = new URLSearchParams(url.search);
-							const videoID = searchParams.get("v");
-							setType("video");
-							if (videoID) setID(videoID);
+						try {
+							if (e.target.value.includes("/shorts/")) {
+								// const url = new URL(e.target.value);
+								const url = e.target.value;
+								const videoID = url.substring(
+									url.lastIndexOf("/shorts/") + 8,
+									url.length,
+								);
+								setType("short");
+								// console.log(videoID);
+								if (videoID) {
+									setID(videoID);
+									getVideoInfoFromOEmbed(videoID);
+								}
+							} else {
+								const url = new URL(e.target.value);
+								const searchParams = new URLSearchParams(url.search);
+								const videoID = searchParams.get("v");
+								setType("video");
+								if (videoID) {
+									setID(videoID);
+									getVideoInfoFromOEmbed(videoID);
+								}
+							}
+						} catch (error) {
+							console.warn("Failed to construct URL - ", error);
 						}
 					}}
 					placeholder="Enter youtube url here..."
 				/>
 
 				<br />
+				<br />
+
+				<H3 extend={styles.img_title}>{info?.title}</H3>
+				<H4 extend={styles.img_title}>{info?.author_name}</H4>
+				{/* <H6 extend={styles.img_title}>{id}</H6> */}
 
 				{id && type === "video" && (
 					<div>
 						{Object.values(YOUTUBE_THUMBNAIL_SIZES).map((size) => {
 							return (
-								<div key={size.size}>
-									<div>
-										<H4>{size.title}</H4>
-										<img
-											src={size.url(id)}
-											alt=""
-											style={{
-												maxWidth: "100%",
-											}}
-										/>
-									</div>
+								<div key={size.title} {...stylex.props(styles.img_wrapper)}>
+									<H4 extend={styles.img_title}>{size.title}</H4>
+									<img
+										src={size.url(id)}
+										{...stylex.props(styles.maxWidth)}
+										alt={`${info?.title}__${size.title}`}
+									/>
+
+									<Button
+										onClick={() =>
+											downloadImage(
+												size.url(id),
+												`${info?.title} --- ${info?.author_name} --- ${id}.jpg`,
+											)
+										}
+									>
+										Download {size.title}
+									</Button>
 								</div>
 							);
 						})}
@@ -187,17 +270,24 @@ export default function YoutubeThumbnailGrabber() {
 					<div>
 						{Object.values(YOUTUBE_SHORTS_THUMBNAILS).map((size) => {
 							return (
-								<div key={size.title}>
-									<div>
-										<H4>{size.title}</H4>
-										<img
-											src={size.url(id)}
-											alt=""
-											style={{
-												maxWidth: "100%",
-											}}
-										/>
-									</div>
+								<div key={size.title} {...stylex.props(styles.img_wrapper)}>
+									<H4 extend={styles.img_title}>{size.title}</H4>
+									<img
+										src={size.url(id)}
+										{...stylex.props(styles.maxWidth)}
+										alt={`${info?.title}__${size.title}`}
+									/>
+
+									<Button
+										onClick={() =>
+											downloadImage(
+												size.url(id),
+												`${info?.title} --- ${info?.author_name} --- ${id}.jpg`,
+											)
+										}
+									>
+										Download {size.title}
+									</Button>
 								</div>
 							);
 						})}
