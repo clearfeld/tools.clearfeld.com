@@ -6,6 +6,7 @@ import Sidebar from "./commons/sidebar";
 import URIEncoderDecoder from "./pages/uri_encode_decode";
 
 import YoutubeThumbnailGrabber from "./pages/youtube/thumbnail_grabber";
+import WordCounter from "./pages/strings/word_count";
 
 function App() {
 	return (
@@ -24,6 +25,8 @@ function App() {
 					<Route index element={<YoutubeThumbnailGrabber />} />
 
 					<Route path="uri-encoder-decoder" element={<URIEncoderDecoder />} />
+
+					<Route path="word-counter" element={<WordCounter />} />
 
 					<Route path="youtube">
 						<Route

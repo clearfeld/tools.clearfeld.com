@@ -3,7 +3,7 @@ import { forwardRef } from "react";
 
 const styles = stylex.create({
 	base: {
-		// backgroundColor: "var(--editor-background)",
+		backgroundColor: "var(--background-100)",
 		height: "100%",
 		display: "flex",
 		flexDirection: "column",

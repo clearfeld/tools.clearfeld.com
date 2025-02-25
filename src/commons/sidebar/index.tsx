@@ -28,6 +28,8 @@ export default function Sidebar() {
 		<div {...stylex.props(styles.base)}>
 			<LinkBtn to={"/uri-encoder-decoder"}>URI Encoder / Decoder</LinkBtn>
 
+			<LinkBtn to={"/word-counter"}>Word Counter</LinkBtn>
+
 			<LinkBtn to={"/youtube/thumbnail-grabber"}>Youtube Thumbnail Grabber</LinkBtn>
 		</div>
 	);
