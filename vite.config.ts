@@ -16,7 +16,23 @@ export default defineConfig({
 			libraries: ["@controlkit/ui"],
 		}),
 	],
-
+	build: {
+		rollupOptions: {
+			output: {
+				manualChunks: {
+					vendor: [
+						"@controlkit/ui",
+						"react",
+						"react-dom",
+						"react-router",
+						"jotai",
+						"fuse.js",
+						"@stylexjs/stylex",
+					],
+				},
+			},
+		},
+	},
 	resolve: {
 		alias: {
 			"@src": resolve(__dirname, "src"),
