@@ -11,6 +11,7 @@ const styles = stylex.create({
 		boxSizing: "border-box",
 		padding: "1rem",
 		gap: "1rem",
+		minHeight: "100vh",
 		height: "100%",
 		width: "100%",
 	},

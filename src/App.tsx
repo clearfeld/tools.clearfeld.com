@@ -7,10 +7,13 @@ import URIEncoderDecoder from "./pages/uri_encode_decode";
 
 import YoutubeThumbnailGrabber from "./pages/youtube/thumbnail_grabber";
 import WordCounter from "./pages/strings/word_count";
+import CSSCursors from "./pages/css/cursors";
 
 function App() {
 	return (
 		<>
+			<Sidebar />
+
 			<div
 				style={{
 					display: "grid",
@@ -18,11 +21,13 @@ function App() {
 					// gridTemplateColumns: "1fr",
 				}}
 			>
-				<Sidebar />
+				<div />
 
 				<Routes>
 					{/* TEMP default index page */}
 					<Route index element={<YoutubeThumbnailGrabber />} />
+
+					<Route path="css/cursors" element={<CSSCursors />} />
 
 					<Route path="uri-encoder-decoder" element={<URIEncoderDecoder />} />
 

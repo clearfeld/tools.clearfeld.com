@@ -5,7 +5,8 @@ const styles = stylex.create({
 	base: {
 		backgroundColor: "var(--background-100)",
 		minHeight: "100vh",
-		width: "100%",
+		width: "320px",
+		position: "fixed",
 	},
 
 	link_restyle: {
@@ -26,6 +27,8 @@ const styles = stylex.create({
 export default function Sidebar() {
 	return (
 		<div {...stylex.props(styles.base)}>
+			<LinkBtn to={"/css/cursors"}>Cursors</LinkBtn>
+
 			<LinkBtn to={"/uri-encoder-decoder"}>URI Encoder / Decoder</LinkBtn>
 
 			<LinkBtn to={"/word-counter"}>Word Counter</LinkBtn>
