@@ -62,36 +62,46 @@ export default function WordCounter() {
 	}
 
 	return (
-		<div {...stylex.props(styles.wrapper)}>
-			<div {...stylex.props(util_styles.display_block_base, styles.block)}>
-				<H2>Input</H2>
+		<>
+			<title>Word Counter</title>
+			<meta
+				name="description"
+				content={
+					"Copy and paste your text into the editor to count its words, characters, sentences."
+				}
+			/>
 
-				<TextareaBlock
-					value={text}
-					setValue={setText}
-					onChange={onChangeText}
-				/>
+			<div {...stylex.props(styles.wrapper)}>
+				<div {...stylex.props(util_styles.display_block_base, styles.block)}>
+					<H2>Input</H2>
+
+					<TextareaBlock
+						value={text}
+						setValue={setText}
+						onChange={onChangeText}
+					/>
+				</div>
+
+				<div {...stylex.props(util_styles.display_block_base)}>
+					<H2>Information</H2>
+
+					<br />
+
+					<OutputBlock description={wordCount.toString()} title="Word Count" />
+
+					<OutputBlock
+						description={charCount.toString()}
+						title="Character Count"
+					/>
+
+					<OutputBlock
+						description={sentenceCount.toString()}
+						title="Sentence Count"
+					/>
+
+					<OutputBlock description={lineCount.toString()} title="Line Count" />
+				</div>
 			</div>
-
-			<div {...stylex.props(util_styles.display_block_base)}>
-				<H2>Information</H2>
-
-				<br />
-
-				<OutputBlock description={wordCount.toString()} title="Word Count" />
-
-				<OutputBlock
-					description={charCount.toString()}
-					title="Character Count"
-				/>
-
-				<OutputBlock
-					description={sentenceCount.toString()}
-					title="Sentence Count"
-				/>
-
-				<OutputBlock description={lineCount.toString()} title="Line Count" />
-			</div>
-		</div>
+		</>
 	);
 }

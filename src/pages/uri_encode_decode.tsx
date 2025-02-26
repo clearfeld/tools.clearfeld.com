@@ -17,7 +17,7 @@ const styles = stylex.create({
 	},
 });
 
-function URIEncoderDecoder() {
+export default function URIEncoderDecoder() {
 	const [text, setText] = useState<string>("");
 	const [decoded, setDecoded] = useState<string>("");
 
@@ -34,35 +34,38 @@ function URIEncoderDecoder() {
 	}
 
 	return (
-		<div {...stylex.props(styles.base)}>
-			<div
-				{...stylex.props(
-					util_styles.display_block_base,
-					util_styles.flex_column,
-				)}
-			>
-				<H2>Decoded</H2>
-				<TextareaBlock
-					value={decoded}
-					setValue={setDecoded}
-					onChange={onChangeDecoded}
-				/>
+		<>
+			<title>URI Encoder / Decoder</title>
+			<meta name="description" content={"Decode or Encode URI strings"} />
+
+			<div {...stylex.props(styles.base)}>
+				<div
+					{...stylex.props(
+						util_styles.display_block_base,
+						util_styles.flex_column,
+					)}
+				>
+					<H2>Decoded</H2>
+					<TextareaBlock
+						value={decoded}
+						setValue={setDecoded}
+						onChange={onChangeDecoded}
+					/>
+				</div>
+				<div
+					{...stylex.props(
+						util_styles.display_block_base,
+						util_styles.flex_column,
+					)}
+				>
+					<H2>Encoded</H2>
+					<TextareaBlock
+						value={text}
+						setValue={setText}
+						onChange={onChangeEncoded}
+					/>
+				</div>
 			</div>
-			<div
-				{...stylex.props(
-					util_styles.display_block_base,
-					util_styles.flex_column,
-				)}
-			>
-				<H2>Encoded</H2>
-				<TextareaBlock
-					value={text}
-					setValue={setText}
-					onChange={onChangeEncoded}
-				/>
-			</div>
-		</div>
+		</>
 	);
 }
-
-export default URIEncoderDecoder;

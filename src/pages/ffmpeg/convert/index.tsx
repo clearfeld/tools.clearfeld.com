@@ -7,6 +7,8 @@ import { fetchFile, toBlobURL } from "@ffmpeg/util";
 // TODO: add ffprobe
 // TODO: have toggle for gif or webm
 
+const page_title = "MP4 to Webm";
+
 import {
 	H1,
 	Button,
@@ -168,128 +170,135 @@ export default function FFMPEGConvert() {
 	}
 
 	return (
-		<div
-			{...stylex.props(styles.base)}
-			onDrop={async (e) => {
-				e.preventDefault();
-				if (e.dataTransfer.files?.[0]) {
-					// console.log("File dropped:", e.dataTransfer.files[0]);
-					ReadFile(e.dataTransfer.files[0]);
-				}
-			}}
-			onDragOver={(e) => {
-				e.preventDefault();
-			}}
-			onDragEnter={(e) => {
-				// TODO: should add a hover effect
-				e.preventDefault();
-			}}
-		>
-			<div {...stylex.props(styles.container)}>
-				<H1>MP4 to Webm</H1>
+		<>
+			<title>{page_title}</title>
+			<meta name="description" content={"Convert mp4 files to webm"} />
 
-				<br />
+			<div
+				{...stylex.props(styles.base)}
+				onDrop={async (e) => {
+					e.preventDefault();
+					if (e.dataTransfer.files?.[0]) {
+						// console.log("File dropped:", e.dataTransfer.files[0]);
+						ReadFile(e.dataTransfer.files[0]);
+					}
+				}}
+				onDragOver={(e) => {
+					e.preventDefault();
+				}}
+				onDragEnter={(e) => {
+					// TODO: should add a hover effect
+					e.preventDefault();
+				}}
+			>
+				<div {...stylex.props(styles.container)}>
+					<H1>{page_title}</H1>
 
-				{loaded ? (
-					<div>
-						<div {...stylex.props(styles.sub_container)}>
-							<div {...stylex.props(styles.block)}>
-								<video
-									ref={videoRef}
-									controls
-									{...stylex.props(styles.videotag)}
-								/>
+					<br />
 
-								<br />
-								<br />
+					{loaded ? (
+						<div>
+							<div {...stylex.props(styles.sub_container)}>
+								<div {...stylex.props(styles.block)}>
+									<video
+										ref={videoRef}
+										controls
+										{...stylex.props(styles.videotag)}
+									/>
 
-								<Button
-									onClick={() => document.getElementById("fileInput")?.click()}
-									fullWidth
-									variant={ButtonVariants.ACTION}
-								>
-									<input
-										type="file"
-										id="fileInput"
-										style={{ display: "none" }}
-										accept="video/*"
-										onChange={(e) => {
-											if (e.target.files?.[0]) {
-												console.log("File selected:", e.target.files[0]);
-												ReadFile(e.target.files[0]);
-												// Handle file here
+									<br />
+									<br />
+
+									<Button
+										onClick={() =>
+											document.getElementById("fileInput")?.click()
+										}
+										fullWidth
+										variant={ButtonVariants.ACTION}
+									>
+										<input
+											type="file"
+											id="fileInput"
+											style={{ display: "none" }}
+											accept="video/*"
+											onChange={(e) => {
+												if (e.target.files?.[0]) {
+													console.log("File selected:", e.target.files[0]);
+													ReadFile(e.target.files[0]);
+													// Handle file here
+												}
+											}}
+										/>
+										Click or drag and drop a video file here
+									</Button>
+
+									<br />
+
+									<p>&nbsp;</p>
+								</div>
+
+								<div {...stylex.props(styles.block)}>
+									<video
+										ref={videoTranscodeRef}
+										controls
+										{...stylex.props(styles.videotag)}
+									/>
+
+									<br />
+									<br />
+
+									<Button
+										onClick={() => {
+											if (videoTranscodeRef.current?.src && fileRef.current) {
+												const a = document.createElement("a");
+												a.href = videoTranscodeRef.current.src;
+
+												a.download = `${fileRef.current.name.split(".")[0]}.webm`;
+												document.body.appendChild(a);
+												a.click();
+												document.body.removeChild(a);
 											}
 										}}
-									/>
-									Click or drag and drop a video file here
-								</Button>
-
-								<br />
-
-								<p>&nbsp;</p>
-							</div>
-
-							<div {...stylex.props(styles.block)}>
-								<video
-									ref={videoTranscodeRef}
-									controls
-									{...stylex.props(styles.videotag)}
-								/>
-
-								<br />
-								<br />
-
-								<Button
-									onClick={() => {
-										if (videoTranscodeRef.current?.src && fileRef.current) {
-											const a = document.createElement("a");
-											a.href = videoTranscodeRef.current.src;
-
-											a.download = `${fileRef.current.name.split(".")[0]}.webm`;
-											document.body.appendChild(a);
-											a.click();
-											document.body.removeChild(a);
+										disabled={
+											!videoTranscodeRef.current ||
+											!videoTranscodeRef.current.src ||
+											transcoding
 										}
-									}}
-									disabled={
-										!videoTranscodeRef.current ||
-										!videoTranscodeRef.current.src ||
-										transcoding
-									}
-									fullWidth
-								>
-									Download converted video
-								</Button>
+										fullWidth
+									>
+										Download converted video
+									</Button>
 
-								<br />
+									<br />
 
-								<p ref={messageRef}>&nbsp;</p>
+									<p ref={messageRef}>&nbsp;</p>
+								</div>
 							</div>
+
+							<Button onClick={transcode} fullWidth loading={transcoding}>
+								Begin Transcode
+							</Button>
 						</div>
+					) : (
+						<div>
+							<p>Loading ffmpeg...</p>
+							<LoadingSpinner />
+						</div>
+					)}
 
-						<Button onClick={transcode} fullWidth loading={transcoding}>
-							Begin Transcode
-						</Button>
-					</div>
-				) : (
-					<div>
-						<p>Loading ffmpeg...</p>
-						<LoadingSpinner />
-					</div>
-				)}
+					<br />
 
-				<br />
-
-				<Alert variant={AlertVariants.DEFAULT}>
-					<AlertIconDefault />
-					<AlertTitle>Heads up!</AlertTitle>
-					<AlertDescription>
-						Please note that this is the ffmpeg.wasm library running in the
-						browser. The transcoding process is done within the browser and may
-						take some time depending on the size of the video file.
-					</AlertDescription>
-				</Alert>
+					<Alert variant={AlertVariants.DEFAULT}>
+						<AlertIconDefault />
+						<AlertTitle>Heads up!</AlertTitle>
+						<AlertDescription>
+							Please note that this is the ffmpeg.wasm library running in the
+							browser. The transcoding process is done within the browser and
+							may take some time depending on the size of the video file.
+						</AlertDescription>
+					</Alert>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }

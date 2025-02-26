@@ -84,65 +84,70 @@ function Section(props: I_SectionProps) {
 
 export default function CSSCursors() {
 	return (
-		<div {...stylex.props(styles.base)}>
-			<div {...stylex.props(util_styles.display_block_base)}>
-				<Section title="General Purpose" cursors={["default", "none"]} />
+		<>
+			<title>CSS Cursors</title>
+			<meta name="description" content={"A list showing all css cursors."} />
 
-				<br />
+			<div {...stylex.props(styles.base)}>
+				<div {...stylex.props(util_styles.display_block_base)}>
+					<Section title="General Purpose" cursors={["default", "none"]} />
 
-				<Section
-					title="Status"
-					cursors={[
-						"help",
-						"pointer",
-						"progress",
-						"wait",
-						"context-menu",
-						"not-allowed",
-					]}
-				/>
+					<br />
 
-				<br />
+					<Section
+						title="Status"
+						cursors={[
+							"help",
+							"pointer",
+							"progress",
+							"wait",
+							"context-menu",
+							"not-allowed",
+						]}
+					/>
 
-				<Section
-					title="Selection"
-					cursors={["cell", "crosshair", "text", "vertical-text"]}
-				/>
+					<br />
 
-				<br />
+					<Section
+						title="Selection"
+						cursors={["cell", "crosshair", "text", "vertical-text"]}
+					/>
 
-				<Section title="Zoom" cursors={["zoom-in", "zoom-out"]} />
+					<br />
 
-				<br />
+					<Section title="Zoom" cursors={["zoom-in", "zoom-out"]} />
 
-				<Section
-					title="Drag and Drop"
-					cursors={["alias", "copy", "move", "no-drop", "grab", "grabbing"]}
-				/>
+					<br />
 
-				<br />
+					<Section
+						title="Drag and Drop"
+						cursors={["alias", "copy", "move", "no-drop", "grab", "grabbing"]}
+					/>
 
-				<Section
-					title="Status"
-					cursors={[
-						"all-scroll",
-						"col-resize",
-						"row-resize",
-						"n-resize",
-						"e-resize",
-						"s-resize",
-						"w-resize",
-						"ns-resize",
-						"ew-resize",
-						"ne-resize",
-						"nw-resize",
-						"se-resize",
-						"sw-resize",
-						"nesw-resize",
-						"nwse-resize",
-					]}
-				/>
+					<br />
+
+					<Section
+						title="Status"
+						cursors={[
+							"all-scroll",
+							"col-resize",
+							"row-resize",
+							"n-resize",
+							"e-resize",
+							"s-resize",
+							"w-resize",
+							"ns-resize",
+							"ew-resize",
+							"ne-resize",
+							"nw-resize",
+							"se-resize",
+							"sw-resize",
+							"nesw-resize",
+							"nwse-resize",
+						]}
+					/>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }
