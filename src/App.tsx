@@ -8,6 +8,7 @@ import URIEncoderDecoder from "./pages/uri_encode_decode";
 import YoutubeThumbnailGrabber from "./pages/youtube/thumbnail_grabber";
 import WordCounter from "./pages/strings/word_count";
 import CSSCursors from "./pages/css/cursors";
+import FFMPEGConvert from "./pages/ffmpeg/convert";
 
 function App() {
 	return (
@@ -32,6 +33,14 @@ function App() {
 					<Route path="uri-encoder-decoder" element={<URIEncoderDecoder />} />
 
 					<Route path="word-counter" element={<WordCounter />} />
+
+					<Route path="ffmpeg">
+						<Route
+							index
+							element={<FFMPEGConvert />}
+							path="convert"
+						/>
+					</Route>
 
 					<Route path="youtube">
 						<Route

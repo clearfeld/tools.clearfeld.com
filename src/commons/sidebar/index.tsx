@@ -33,6 +33,8 @@ export default function Sidebar() {
 
 			<LinkBtn to={"/word-counter"}>Word Counter</LinkBtn>
 
+			<LinkBtn to={"/ffmpeg/convert"}>MP4 to Webm</LinkBtn>
+
 			<LinkBtn to={"/youtube/thumbnail-grabber"}>Youtube Thumbnail Grabber</LinkBtn>
 		</div>
 	);

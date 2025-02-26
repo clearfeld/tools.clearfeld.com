@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "@controlkit/ui": "^0.1.6",
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/core-mt": "^0.12.9",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
     "@stylexjs/stylex": "^0.9.3",
     "fuse.js": "^7.0.0",
     "jotai": "^2.10.3",
@@ -20,6 +24,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
+    "@ffmpeg/types": "^0.12.4",
     "@types/node": "^22.13.5",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

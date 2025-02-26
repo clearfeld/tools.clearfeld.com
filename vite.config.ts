@@ -16,6 +16,9 @@ export default defineConfig({
 			libraries: ["@controlkit/ui"],
 		}),
 	],
+	optimizeDeps: {
+		exclude: ["@ffmpeg/ffmpeg", "@ffmpeg/util"],
+	},
 	build: {
 		rollupOptions: {
 			output: {
