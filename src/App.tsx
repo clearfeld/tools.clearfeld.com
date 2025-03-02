@@ -9,6 +9,7 @@ import YoutubeThumbnailGrabber from "./pages/youtube/thumbnail_grabber";
 import WordCounter from "./pages/strings/word_count";
 import CSSCursors from "./pages/css/cursors";
 import FFMPEGConvert from "./pages/ffmpeg/convert";
+import Mediainfo from "./pages/mediainfo";
 
 function App() {
 	return (
@@ -39,6 +40,14 @@ function App() {
 							index
 							element={<FFMPEGConvert />}
 							path="convert"
+						/>
+					</Route>
+
+					<Route path="mediainfo">
+						<Route
+							index
+							element={<Mediainfo />}
+							// path="convert"
 						/>
 					</Route>
 

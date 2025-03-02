@@ -4,12 +4,17 @@ import react from "@vitejs/plugin-react";
 import styleX from "vite-plugin-stylex";
 import { resolve } from "node:path";
 import { fileURLToPath, URL } from "node:url";
+import wasm from "vite-plugin-wasm";
+import topLevelAwait from "vite-plugin-top-level-await";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 // https://vite.dev/config/
 export default defineConfig({
 	plugins: [
+		wasm(),
+		topLevelAwait(),
+
 		react(),
 
 		styleX({
@@ -17,7 +22,12 @@ export default defineConfig({
 		}),
 	],
 	optimizeDeps: {
-		exclude: ["@ffmpeg/ffmpeg", "@ffmpeg/util"],
+		exclude: [
+			"@ffmpeg/ffmpeg",
+			"@ffmpeg/util",
+			//
+			"mediainfo.js",
+		],
 	},
 	build: {
 		rollupOptions: {

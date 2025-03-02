@@ -11,7 +11,7 @@ const styles = stylex.create({
 
 	link_restyle: {
 		display: "grid",
-        boxSizing: "border-box",
+		boxSizing: "border-box",
 		color: "var(--text-100)",
 		width: "100%",
 		textDecoration: "none",
@@ -35,7 +35,11 @@ export default function Sidebar() {
 
 			<LinkBtn to={"/ffmpeg/convert"}>MP4 to Webm</LinkBtn>
 
-			<LinkBtn to={"/youtube/thumbnail-grabber"}>Youtube Thumbnail Grabber</LinkBtn>
+			<LinkBtn to={"/mediainfo"}>MediaInfo</LinkBtn>
+
+			<LinkBtn to={"/youtube/thumbnail-grabber"}>
+				Youtube Thumbnail Grabber
+			</LinkBtn>
 		</div>
 	);
 }

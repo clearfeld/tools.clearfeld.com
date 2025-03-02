@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@controlkit/ui':
-        specifier: ^0.1.6
-        version: 0.1.6(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^0.2.1
+        version: 0.2.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@ffmpeg/core':
         specifier: ^0.12.10
         version: 0.12.10
@@ -32,6 +32,9 @@ importers:
       jotai:
         specifier: ^2.10.3
         version: 2.10.3(@types/react@19.0.0)(react@19.0.0)
+      mediainfo.js:
+        specifier: ^0.3.4
+        version: 0.3.4
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -41,6 +44,9 @@ importers:
       react-router:
         specifier: ^7.2.0
         version: 7.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      vite-plugin-static-copy:
+        specifier: ^2.3.0
+        version: 2.3.0(vite@6.0.3(@types/node@22.13.5))
     devDependencies:
       '@eslint/js':
         specifier: ^9.15.0
@@ -84,6 +90,12 @@ importers:
       vite-plugin-stylex:
         specifier: ^0.13.0
         version: 0.13.0(@stylexjs/stylex@0.9.3)(vite@6.0.3(@types/node@22.13.5))
+      vite-plugin-top-level-await:
+        specifier: ^1.5.0
+        version: 1.5.0(rollup@4.28.0)(vite@6.0.3(@types/node@22.13.5))
+      vite-plugin-wasm:
+        specifier: ^3.4.1
+        version: 3.4.1(vite@6.0.3(@types/node@22.13.5))
 
 packages:
 
@@ -188,244 +200,251 @@ packages:
     resolution: {integrity: sha512-vN5p+1kl59GVKMvTHt55NzzmYVxprfJD+ql7U9NFIfKCBkYE55LYtS+WtPlaYOyzydrKI8Nezd+aZextrd+FMA==}
     engines: {node: '>=6.9.0'}
 
-  '@controlkit/accordion@0.1.0':
-    resolution: {integrity: sha512-Dct0rnRdyuNYspcr4T+y+MYaMvSpRAmk0Va8lckt0Jrk0eulj2EidSrSex3PLvzCR9gKruW4XPVbh3h7av44Uw==}
+  '@controlkit/accordion@0.2.1':
+    resolution: {integrity: sha512-V5oVSgIK79Idi7p2w38Lhyv+3Rz/oLp6w8FQ/xw0ycmYGRWvb0t9oEEgtHm0T+/vXWBOxjnz2cJbcLuN0VtXHw==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/alert-dialog@1.0.0-alpha.0':
-    resolution: {integrity: sha512-BFSS0qEgAL/KgwNrVEux1ytXq7ScnSUA2XgBGSYCmmIs/+w5sUiXfoM8P0vFOzUp7dHYQva8KqttSxQeG7aJMA==}
+  '@controlkit/alert-dialog@1.0.0-beta.3':
+    resolution: {integrity: sha512-IjqPv8rOr6Lajxx8gNlbu8h1DzjQF5F5yJpYQSrMKQC33y/8kRFs8RtvLAuvZ0YfIfQnqA721NFxeurl0wbinQ==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/alert@0.1.0':
-    resolution: {integrity: sha512-BgC3JWnsvwE68rQuL4ivWvcaUdMhRJlwgI9m9F2KJ5epRpC8/H67gfCIBC6fSTyH5x3fMSKMuDyj8wl2OcnJUw==}
+  '@controlkit/alert@0.2.1':
+    resolution: {integrity: sha512-/SVpYWOfv58entRVcoWyUDO8dWJrfs9Kx9tqcuAq+NmAyJsijGipl4glQ3vsp7FwUNCaLgtUiNVYw3sjQfEu8w==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/aspect-ratio@0.1.0':
-    resolution: {integrity: sha512-nPqOjbP6B8OxvGUIkYz0Fby6I6Bt2ESa0pAHJb+3GSSa0N90JslZlJHnxVm9fshFami6nQHh85aSq57QAQK7fQ==}
+  '@controlkit/aspect-ratio@0.2.1':
+    resolution: {integrity: sha512-CAR3J1svAsliYBs20JvQapv+3rlTkauZifgNas0jen/uXBv4hg9Ejs+Hc+yl0W3C0d/9+fq9vbStQB9WzJPyFQ==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/avatar@0.3.1':
-    resolution: {integrity: sha512-d42x++jyQ2iIZUUJOMPjdqyGMZjg5y2Ia+YtypfwNluIyWg9ZLNrEbrxwn3ppE+fjO1BybH4s6SLV7qkUVByGg==}
+  '@controlkit/avatar@0.4.1':
+    resolution: {integrity: sha512-ctRyJx0+WJCaVirlac3+mZxM4y6Y0HIW904L9/aW9hiVoUUkrl3OFV3V+MSjx0KkdbxZ9vqO8r4xjouJXK9cPQ==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/badge@0.2.0':
-    resolution: {integrity: sha512-6Rlh4CvaaKyL/evVopRVZQOBVGWMPWFVx5MUlpDGlfdnd/3+Lm067fo73ZuvbBFl+33ID3jyfpPkkt1+rSnp/w==}
+  '@controlkit/badge@0.3.1':
+    resolution: {integrity: sha512-w+1g3BrzZ5CYZHZTUMSYHQ9VM8LNVsr+SlJplRQpwULMgteEG5fa1e90YBzrE7MeXqRmkMXt2yexKYBAGlSWzA==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/breadcrumb@0.1.0':
-    resolution: {integrity: sha512-FH+SIc8Je+TFcisI8n2fCR/f+aSTh0WjAbIninr9e2oERen3VF5uPaD2ySCik2n7UhT2SeuDNUsd6AR50RcLbQ==}
+  '@controlkit/breadcrumb@0.2.1':
+    resolution: {integrity: sha512-0C3mZ68OQ2emQpVhtS3B0J2mH9fghKN26Wn5hLN5MEHutWrcPyESvlavJGP7KabuwUPOLaRa52JBXpwbzktxTg==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/button@0.4.0':
-    resolution: {integrity: sha512-hLYYrgS2Bc02WxChU6cRGg4DciYSSKaB9wfifH2MYs2Zww6CA0daBlRXzHDoi9wJIig7yOoZ9ypTsEkvrl6RZg==}
+  '@controlkit/button@0.5.1':
+    resolution: {integrity: sha512-Uonp5vDxrG/YBIqA5in3Lz8XN2tgW4t8d8WeTP8/zeD9ROlE0i8y4e0mgNusj2RNFmm5FyeiWKYjTUG+Ha7tlw==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/card@0.1.0':
-    resolution: {integrity: sha512-sm7dqlIeqyk4xR34sdJIVMTNfFJYpASlPITiMx6/+xFPnjFkGPnuXDzXynZ9WOOxCb3JSk94FPc1OQKWTmwlLQ==}
+  '@controlkit/card@0.2.1':
+    resolution: {integrity: sha512-uUXajfhQdvWqB8V3xY2jFeLy+nNcH8wpMaLy9ET7hnnN0sazu8vfZWxAQPDE5yzdNPvnJomrtPSmfgGS3kULMg==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/checkbox@0.2.0':
-    resolution: {integrity: sha512-ihVIOmsvOahNvsle/z8yLuUXlWUfYUu1NdaBEDC/BZ0e7j8DBND9O2Pyx5rVueFtwbzqDiRpELhowFZJwAdMNQ==}
+  '@controlkit/checkbox@0.3.1':
+    resolution: {integrity: sha512-599tRy3hGtAQoQh32LSkhNlpfeof60Hdh5f4Sa2ZIDpFZ8gi26q+9Zh6QZtObtjxYIeAjESndrZy7zabpH/dMA==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/collapsible@0.1.0':
-    resolution: {integrity: sha512-npTa9EB8J85C73XczITprTbpkH6/SbdoVfLEB0vFNdGhPSBIxoAnBokpK2irC8YXmHMtDBzeK8ih9nsM8VhIcw==}
+  '@controlkit/collapsible@0.2.1':
+    resolution: {integrity: sha512-vdQ84ujKVuNEjivSlx614MYoB9lfCyFUXaLnknSSRq3ZUQXLfqdetCRObPi1Pr2eC8ME/vJ3KHOwJyHkqjQKNw==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/color-picker@0.2.0':
-    resolution: {integrity: sha512-XQfl6k2trdWdGIUxkDl1E7tVZxPMj7gwtkjT+v/Ahd0ue9sBIJ3onXmKaGWWYL/3HlXHXPVvZjf8BF3TjyMlEw==}
+  '@controlkit/color-picker@0.3.1':
+    resolution: {integrity: sha512-CJ0W+Y14i/fVUpK5fEzd9gzPlKyfzS8AwniufQeVWlQ9k0KeSUrO5TiuZzS1u51Fx8xwCQGzn5XTP56geIro9w==}
     peerDependencies:
-      '@controlkit/input': workspace:*
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@controlkit/input': 0.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/dialog@0.3.1':
-    resolution: {integrity: sha512-qpyF8cS7TnFdte1q9gFpVuC5YVgMcRHgZGkX4ki000t2QXwhRXbm0Tn4zztSRe4P8RjpmPo+BhdkPsxWW3L6Ug==}
+  '@controlkit/dialog@1.0.0-beta.2':
+    resolution: {integrity: sha512-c6C+naqYRwmsPSM+KgtsfuXNcVvDuLjAiey4w3O7VWYleXmqwnzJ7iPXK3fsJqsJYYUFgG+UEZsdfYiAUgKYaw==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/divider@0.2.0':
-    resolution: {integrity: sha512-VgKw+rdpApXNu6Wp7+TY/zuNYmVcqf2/mSn8kWHaxnb1/isfUtJROAVVy4PUc/xRpa0+jYuZn934xi0TKUCzLQ==}
+  '@controlkit/divider@0.3.1':
+    resolution: {integrity: sha512-jqYJZzy4BNLu2II+ItrqJIQXw4u00GDz5MEe9ll2n7n5xRm6DjBrndhp4N0jUqpKxbuIlH1bCYg1YszhJhZ4rA==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/dropdown-menu@0.1.0':
-    resolution: {integrity: sha512-fP8uEo+kSoWAbrVhsYDg3bMWDfp+/0wcOfsXiyMcIdXxYB/7aaaTwnygTvtd+yv958dkR5g5Chb7sTiZvCQK2A==}
+  '@controlkit/dropdown-menu@0.2.1':
+    resolution: {integrity: sha512-+eGz5IWZnMxKOp5nCpWGQyqSYfIwmipwdfL8scJ5S8MFv3A87tjYxjWZ9B1x6awaTFl+TX7pnSXZh3G/yHvb4w==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/headings@0.1.0':
-    resolution: {integrity: sha512-viOOsNVZWvPuXzmL+h7s0B6uz09zcquA6uElbRpbLnyM3nez1s0vo8CIF8NwyVY+N6wLi3wbxCQI0BNH28a5Rg==}
+  '@controlkit/headings@0.2.1':
+    resolution: {integrity: sha512-CUlVbgauXE6yd0UKHImFQJh+0P88RBDmsvAvYGQGx+qo0qRhM41rRn40eVUkIsNXEhCD5TxfBm/jDCxPdm37Vw==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/hover-card@0.1.0':
-    resolution: {integrity: sha512-AOSmT5tnb9UajWiLqVUZ/UansNeoYypgrnNOTEF1WV/NepMBur9/8aPZsnZB/FbYQqA41uWuz/zOfKnDq9g3iA==}
+  '@controlkit/hover-card@0.2.2':
+    resolution: {integrity: sha512-MV1v35uux6OxXXEJD42IjrYI2mHTCotq/X4nqBM1btkRUck1iN9WWXF3XxZrIeR9ZIMU5/ky1iMGaYlF6ACNnQ==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/icons@0.1.0':
-    resolution: {integrity: sha512-gXgsuMTZ0tqz0eA2XtOzEOcnwnvZSdMHEUaFcum2qewBj5nLNgyugro3vnUOG2Rm+XE6We+4c0vYJfvFUwTz4g==}
+  '@controlkit/icons@0.2.1':
+    resolution: {integrity: sha512-o80Mnkmyo0W3Pu6Wt8juOE7HYEIqG6vTUZXXaUh4yHwRBbj2DJ/Q+6rdhNrtRvAst/ApUFFZ6Xt7bd1743lMVw==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/input@0.2.0':
-    resolution: {integrity: sha512-Al4XmDyGogu/T7m1A+HwckKyOIhFgIz/3zfTorqhCMkx0+nCFB4ssTnmuAM7Qp8+eYo96uCzcCP1HYjSvL3ikA==}
+  '@controlkit/input@0.3.1':
+    resolution: {integrity: sha512-MjpcJr/qMS/hVRU0XKjT5k3w0+hS5REI8t+V5EEu5GKzIWMYgEMeZmwblQtgBgujxvPdYmJC+YE6QpgP3kTZvw==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/label@0.2.0':
-    resolution: {integrity: sha512-M1P9nK2azSrom/VaR9pg62neKZcxt0E5BWYec6srDh4KIhts6JvTvHZQZ01BsvwVDy+5he/C0e50fXHEDIhGpQ==}
+  '@controlkit/label@0.3.1':
+    resolution: {integrity: sha512-VPiysus5VvzFK2YgtCW3zydhtRJNeqaf6Fzs7VO5spozZvnTTmPwnC+Vn48aA/5nozXwDRete5qOteD1Uptxpg==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/link@0.1.0':
-    resolution: {integrity: sha512-S4mm/yqqKkNStYuw8tH4SXHa8BVc4y0lq/B2DqUpqnEIRoNC+hPXnXqnn0638APV/DUzqhOPflT5LIj0izsnWQ==}
+  '@controlkit/link@0.2.1':
+    resolution: {integrity: sha512-wFxS8GNogi2lTOpnyOD0Cu50xYmfKQhikIiy2VrSKxpjLJQDJfnVg/Wvx2+2xMLx3GN8crgqHRBHhUNTKTUsQg==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/loading@0.1.0':
-    resolution: {integrity: sha512-Ifp5xRQ3jVCXwZN9AAjsB1wWa4g5qFgYLoQ9bwL/OhnZT6D+zQ0Iwg4AOao6SzkojHJa3tkGJHHdg4fMrLdwiQ==}
+  '@controlkit/loading@0.2.0':
+    resolution: {integrity: sha512-WHFv89+g+4zW+DnpcofelOdzAzORU6x6qQyl586VUKvEYJZjhX5ninZOcx5yGNaZ5vd0LXTQ8AEjahWonOKo1w==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/lozenge@0.1.0':
-    resolution: {integrity: sha512-YHvu5b242JllO02v/0OQ0rLwZj+duusHxFluGzImZXqN24ochFcQTGdk2rK6fB8KkIyTdKnVvwcGjO9aSFRZ6w==}
+  '@controlkit/lozenge@0.2.1':
+    resolution: {integrity: sha512-YVINgO4znjbjFRZhAzbti74C1BnI/Bw1CZaQCDjJMc189+GNA42kid556iPiVWJK7WQjvW92i+wmNFoop4Wg0g==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/popover@0.1.0':
-    resolution: {integrity: sha512-1vqK+3VpgN9wordFkCJMPtWwltXOD+0rdH2ayW5o5tL6Ye3WujHPsjryJNBxRNjBvgub6ov+BnLfPWi7SP+ufw==}
+  '@controlkit/popover@0.2.2':
+    resolution: {integrity: sha512-GOu0bceM3rzO9It/Ze8t64w7Xk654CR8tpouun77JiiLkd2zVK+otywkztWn68Wb9AwdFQzgrcwJDdfK2vUnUg==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/progress-bar@0.2.0':
-    resolution: {integrity: sha512-nZp9QlzZj5HfsCwNF6CHWRDKcJvwL2SkGY58ZWKDe2kjioLEFD8QLeV8HeqXtYxhtv96CC+Q/hqS6ey0cS5L8A==}
+  '@controlkit/progress-bar@0.3.1':
+    resolution: {integrity: sha512-115U/2vdOjwtPoYm86fnXWSzv+UZWKr7oNwW6Rb+pR34OAxmCGBNZ+lcXRnF4gOnsBFczzNhXUQeF3AmHbc6Vw==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/select@0.1.0':
-    resolution: {integrity: sha512-MPljll6Rem/9SHohMium0zlhpVFqkPvea1Oa9NxGeAHRXVTaghilyKvmF2s6/Nu8gHlOTE28OrcAyytpprULsQ==}
+  '@controlkit/select@0.2.2':
+    resolution: {integrity: sha512-q9RjmEG63hnefDKJKDYAVjIwZPM76Frd1uZ0yMPu1jmYK2Q74uAmqnN8D9TMAjTrI2Y27j1BDGOK352EgQjzpg==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      '@types/react': ^19.0.10
+      '@types/react-dom': ^19.0.4
+      react: 19.0.0
+      react-dom: 19.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
 
-  '@controlkit/sheet@0.2.0':
-    resolution: {integrity: sha512-QdDwP0bhGIotbpU9ao6/a2taeFKlESBNtZ5PvaJG3Aq7Eunn0vEFzYMuf3WxfQQKzjBDPxYelCpdst/aJvI9tQ==}
+  '@controlkit/sheet@0.3.1':
+    resolution: {integrity: sha512-gvWNNR+LM8lR4tawdlLEDkn/Uobq1/zEJSMD6tAxVVvDmiIgpn75cfbRd27MGcOjEvd+pBxPptG0zTf0Nn0T9A==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/skeleton@0.1.0':
-    resolution: {integrity: sha512-W/hX8QFGNTj0gZmk0oiHJA14PSTLLExV59g26bYlGhXpymPdoLpQLTKdpOdqAy5WcNupbcSEOMslYRdPBt/t6Q==}
+  '@controlkit/skeleton@0.2.0':
+    resolution: {integrity: sha512-TfIgDtQbVpSb6xw1jYso+89Uatsblwdgwb3BD/lW/sBQ3hNtChdzmBwmdLqpbZdPy4zBAgzxofVRmWllslWkDQ==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/switch@0.1.0':
-    resolution: {integrity: sha512-MK4TJNdTn/ZQpzC8V4l6YpnSz6uOdIAM9F28Y6znhYbSUKeVWZEsz+MwaAhyM9oQDKfnw2jxd6li4LYE5iStHg==}
+  '@controlkit/switch@0.2.1':
+    resolution: {integrity: sha512-glYJVQTgJ6ap5kykF/xIpnnt6H7G2hdDs0a3p27gh/UpmmNU9vwp8fyVhbvqn+asRnV0C2eI47CRvKx8KCLeBg==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/tabs@0.2.0':
-    resolution: {integrity: sha512-mCL+OFvjxA6VEoi6yydkqDfVNHa1bxA4061q/96BTb5oHmNTuxHBGjoSb5fzeTWURG0LX3xRCM7SPqV0qEmB0g==}
+  '@controlkit/tabs@0.3.1':
+    resolution: {integrity: sha512-KjqDc9fd61BBPWyrC8BhFP76K2eBo5E0jiccoG70DX5Kl9Q67fSETlHDfynlYEBv4ANoskxkrB2HqhuF//vB7Q==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/textarea@0.1.0':
-    resolution: {integrity: sha512-jW0rWcrvZANhiFjj5fLzwGyXwAsZmFlvVnfaEF6b+wgiLj71//B31j8HVYBKH9FwrOPzmisroYAsfjI1PBfJfg==}
+  '@controlkit/textarea@0.2.1':
+    resolution: {integrity: sha512-YTqrheQTf8OzuYlAfX836/DK99cPDdxi4dFPrmgALXUeF5Al0noAWDtJBHDQ9lzWgHYZ5raIMR2MQNW2lW7UpQ==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
-  '@controlkit/tooltip@0.1.0':
-    resolution: {integrity: sha512-0TYSTuN81X6pmFxxPbZmNv3YArm6ygtGE4Ig09Ol+ouKyd+HhbIw1chgxFjz+bQNicgNFDZCJujXVozsTQZVIQ==}
+  '@controlkit/tooltip@0.2.2':
+    resolution: {integrity: sha512-hPTNzkVq6y6QQQvTeY88VnQH+bXcEiMSQTXRJELMJAnngwk7GrfAvS9382MJPvz4XjxULeGWVGZreEmv7fWtKA==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: ^19.0.0
+      react-dom: ^19.0.0
 
-  '@controlkit/ui@0.1.6':
-    resolution: {integrity: sha512-1xL4UhrHH5iVbuStP3CBtDLEdz3J3HNG2mmlLjffLdmzWCLXafjS2wscE4Nnc+bqkubqOqRKQ0SBUdgIsDkqrA==}
+  '@controlkit/ui@0.2.1':
+    resolution: {integrity: sha512-Rhr3zWP37n7oyGTg4GhG42Mc55P4nXmCjRY37DRiKXUoJrg++vDKS68ayXfntk151NtaZb7660PIbWIqMEopfw==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.9.3
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: ^19.0.0
+      react-dom: ^19.0.0
 
-  '@controlkit/visually-hidden@1.0.0-alpha.0':
-    resolution: {integrity: sha512-KLAQ33pncy5YTHDMC4lmZKGTGk86AzjGql1V1KqjYeLQGv+ceRpH6/ymupgS5Cp+eZoikG1f9ywyfhL79EoPTQ==}
+  '@controlkit/visually-hidden@1.0.2':
+    resolution: {integrity: sha512-TlYIEx/FfIwKpY8F9eXWdA9yVkt9b8aGivAo8/uvNpyqynFCG1OKnvSoX4ZZINd+6BIb3JAcOU2pTch4aDGmGw==}
     peerDependencies:
-      '@stylexjs/stylex': ^0.7.5
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      '@stylexjs/stylex': 0.10.1
+      react: 19.0.0
+      react-dom: 19.0.0
 
   '@esbuild/aix-ppc64@0.24.0':
     resolution: {integrity: sha512-WtKdFM7ls47zkKHFVzMz8opM7LkcsIp9amDUBIAWirg70RM71WRSjdILPsY5Uv1D42ZpUfaPILDlfactHgsRkw==}
@@ -1202,6 +1221,15 @@ packages:
   '@radix-ui/rect@1.1.0':
     resolution: {integrity: sha512-A9+lCBZoaMJlVKcRBz2YByCG+Cp2t6nAnMnNba+XiWxnj6r4JUFqfsgwocMBZU9LPtdxC6wB56ySYpc7LQIoJg==}
 
+  '@rollup/plugin-virtual@3.0.2':
+    resolution: {integrity: sha512-10monEYsBp3scM4/ND4LNH5Rxvh3e/cVeL3jWTgZ2SrQ+BmUoQcopVQvnaMcOnykb1VkxUFuDAN+0FnpTFRy2A==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+
   '@rollup/rollup-android-arm-eabi@4.28.0':
     resolution: {integrity: sha512-wLJuPLT6grGZsy34g4N1yRfYeouklTgPhH1gWXCYspenKYD0s3cR99ZevOGw5BexMNywkbV3UkjADisozBmpPQ==}
     cpu: [arm]
@@ -1300,6 +1328,81 @@ packages:
 
   '@stylexjs/stylex@0.9.3':
     resolution: {integrity: sha512-q3kYZ5bMXlVyF6Wh8b8Uwl701aSu8aEhim0AlQTaAXKMt0J6nTCWOjSwq6GNR74Ez4pcm2Ha4NDqhkYhKYGBcQ==}
+
+  '@swc/core-darwin-arm64@1.11.5':
+    resolution: {integrity: sha512-GEd1hzEx0mSGkJYMFMGLnrGgjL2rOsOsuYWyjyiA3WLmhD7o+n/EWBDo6mzD/9aeF8dzSPC0TnW216gJbvrNzA==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@swc/core-darwin-x64@1.11.5':
+    resolution: {integrity: sha512-toz04z9wAClVvQSEY3xzrgyyeWBAfMWcKG4K0ugNvO56h/wczi2ZHRlnAXZW1tghKBk3z6MXqa/srfXgNhffKw==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@swc/core-linux-arm-gnueabihf@1.11.5':
+    resolution: {integrity: sha512-5SjmKxXdwbBpsYGTpgeXOXMIjS563/ntRGn8Zc12H/c4VfPrRLGhgbJ/48z2XVFyBLcw7BCHZyFuVX1+ZI3W0Q==}
+    engines: {node: '>=10'}
+    cpu: [arm]
+    os: [linux]
+
+  '@swc/core-linux-arm64-gnu@1.11.5':
+    resolution: {integrity: sha512-pydIlInHRzRIwB0NHblz3Dx58H/bsi0I5F2deLf9iOmwPNuOGcEEZF1Qatc7YIjP5DFbXK+Dcz+pMUZb2cc2MQ==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@swc/core-linux-arm64-musl@1.11.5':
+    resolution: {integrity: sha512-LhBHKjkZq5tJF1Lh0NJFpx7ROnCWLckrlIAIdSt9XfOV+zuEXJQOj+NFcM1eNk17GFfFyUMOZyGZxzYq5dveEQ==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@swc/core-linux-x64-gnu@1.11.5':
+    resolution: {integrity: sha512-dCi4xkxXlsk5sQYb3i413Cfh7+wMJeBYTvBZTD5xh+/DgRtIcIJLYJ2tNjWC4/C2i5fj+Ze9bKNSdd8weRWZ3A==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+
+  '@swc/core-linux-x64-musl@1.11.5':
+    resolution: {integrity: sha512-K0AC4TreM5Oo/tXNXnE/Gf5+5y/HwUdd7xvUjOpZddcX/RlsbYOKWLgOtA3fdFIuta7XC+vrGKmIhm5l70DSVQ==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+
+  '@swc/core-win32-arm64-msvc@1.11.5':
+    resolution: {integrity: sha512-wzum8sYUsvPY7kgUfuqVYTgIPYmBC8KPksoNM1fz5UfhudU0ciQuYvUBD47GIGOevaoxhLkjPH4CB95vh1mJ9w==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@swc/core-win32-ia32-msvc@1.11.5':
+    resolution: {integrity: sha512-lco7mw0TPRTpVPR6NwggJpjdUkAboGRkLrDHjIsUaR+Y5+0m5FMMkHOMxWXAbrBS5c4ph7QErp4Lma4r9Mn5og==}
+    engines: {node: '>=10'}
+    cpu: [ia32]
+    os: [win32]
+
+  '@swc/core-win32-x64-msvc@1.11.5':
+    resolution: {integrity: sha512-E+DApLSC6JRK8VkDa4bNsBdD7Qoomx1HvKVZpOXl9v94hUZI5GMExl4vU5isvb+hPWL7rZ0NeI7ITnVLgLJRbA==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [win32]
+
+  '@swc/core@1.11.5':
+    resolution: {integrity: sha512-EVY7zfpehxhTZXOfy508gb3D78ihoGGmvyiTWtlBPjgIaidP1Xw0naHMD78CWiFlZmeDjKXJufGtsEGOnZdmNA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@swc/helpers': '*'
+    peerDependenciesMeta:
+      '@swc/helpers':
+        optional: true
+
+  '@swc/counter@0.1.3':
+    resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
+
+  '@swc/types@0.1.19':
+    resolution: {integrity: sha512-WkAZaAfj44kh/UFdAQcrMP1I0nwRqpt27u+08LMBYMqmQfwwMofYoMh/48NGkMMRfC4ynpfwRbJuu8ErfNloeA==}
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -1418,9 +1521,17 @@ packages:
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
+  ansi-regex@5.0.1:
+    resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
+    engines: {node: '>=8'}
+
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
+
+  anymatch@3.1.3:
+    resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
+    engines: {node: '>= 8'}
 
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
@@ -1431,6 +1542,10 @@ packages:
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+
+  binary-extensions@2.3.0:
+    resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
+    engines: {node: '>=8'}
 
   brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
@@ -1457,6 +1572,14 @@ packages:
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
+
+  chokidar@3.6.0:
+    resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
+    engines: {node: '>= 8.10.0'}
+
+  cliui@8.0.1:
+    resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
+    engines: {node: '>=12'}
 
   color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
@@ -1505,6 +1628,9 @@ packages:
 
   electron-to-chromium@1.5.70:
     resolution: {integrity: sha512-P6FPqAWIZrC3sHDAwBitJBs7N7IF58m39XVny7DFseQXK2eiMn7nNQizFf63mWDDUnFvaqsM8FI0+ZZfLkdUGA==}
+
+  emoji-regex@8.0.0:
+    resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
 
   esbuild@0.24.0:
     resolution: {integrity: sha512-FuLPevChGDshgSicjisSooU0cemp/sGXR841D5LHMB7mTVOmsEHcAxaH3irL53+8YDIeVNQEySh4DaYU/iuPqQ==}
@@ -1610,6 +1736,10 @@ packages:
   flatted@3.3.2:
     resolution: {integrity: sha512-AiwGJM8YcNOaobumgtng+6NHuOqC3A7MixFeDafM3X9cIUM+xUXoS5Vfgf+OihAYe20fxqNM9yPBXJzRtZ/4eA==}
 
+  fs-extra@11.3.0:
+    resolution: {integrity: sha512-Z4XaCL6dUDHfP/jT25jJKMmtxvuwbkrD1vNSMFlo9lNLY2c5FHYSQgHPRZUjAB26TpDEoW9HCOgplrdbaPV/ew==}
+    engines: {node: '>=14.14'}
+
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -1622,6 +1752,10 @@ packages:
   gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
+
+  get-caller-file@2.0.5:
+    resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==}
+    engines: {node: 6.* || 8.* || >= 10.*}
 
   get-nonce@1.0.1:
     resolution: {integrity: sha512-FJhYRoDaiatfEkUK8HKlicmu/3SGFD51q3itKDGoSTysQJBnfOcxU5GxnhE1E6soB76MbT0MBtnKJuXyAx+96Q==}
@@ -1647,6 +1781,9 @@ packages:
     resolution: {integrity: sha512-49TewVEz0UxZjr1WYYsWpPrhyC/B/pA8Bq0fUmet2n+eR7yn0IvNzNaoBwnK6mdkzcN+se7Ez9zUgULTz2QH4g==}
     engines: {node: '>=18'}
 
+  graceful-fs@4.2.11:
+    resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
+
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
@@ -1669,9 +1806,17 @@ packages:
   invariant@2.2.4:
     resolution: {integrity: sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==}
 
+  is-binary-path@2.1.0:
+    resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
+    engines: {node: '>=8'}
+
   is-extglob@2.1.1:
     resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
     engines: {node: '>=0.10.0'}
+
+  is-fullwidth-code-point@3.0.0:
+    resolution: {integrity: sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==}
+    engines: {node: '>=8'}
 
   is-glob@4.0.3:
     resolution: {integrity: sha512-xelSayHH36ZgE7ZWhli7pW34hNbNl8Ojv5KVmkJD4hBdD3th8Tfk9vYasLM+mXWOZhFkgZfxhLSnrwRr4elSSg==}
@@ -1722,6 +1867,9 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
+  jsonfile@6.1.0:
+    resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
+
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
@@ -1742,6 +1890,11 @@ packages:
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
+
+  mediainfo.js@0.3.4:
+    resolution: {integrity: sha512-uTUlVqw9PcsuVt4DcXvqfQGKQBx3BCyQcDnJ68kSQyOxz0InIsCuykPShrYp+c5uDr6Mvhy5AfaboHn77xR7Ug==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -1772,6 +1925,10 @@ packages:
   node-releases@2.0.18:
     resolution: {integrity: sha512-d9VeXT4SJ7ZeOqGX6R5EM022wpL+eWPooLI+5UpWn2jCT1aosUQEhQP214x33Wkwx3JQMvIm+tIoVOdodFS40g==}
 
+  normalize-path@3.0.0:
+    resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
+    engines: {node: '>=0.10.0'}
+
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
     engines: {node: '>= 0.8.0'}
@@ -1783,6 +1940,10 @@ packages:
   p-locate@5.0.0:
     resolution: {integrity: sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==}
     engines: {node: '>=10'}
+
+  p-map@7.0.3:
+    resolution: {integrity: sha512-VkndIv2fIB99swvQoA65bm+fsmt6UNdGeIB0oxBs+WhAhdh08QA04JXpI7rbB9r08/nkbysKoya9rtDERYOYMA==}
+    engines: {node: '>=18'}
 
   parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
@@ -1880,6 +2041,14 @@ packages:
     resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
     engines: {node: '>=0.10.0'}
 
+  readdirp@3.6.0:
+    resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
+    engines: {node: '>=8.10.0'}
+
+  require-directory@2.1.1:
+    resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
+    engines: {node: '>=0.10.0'}
+
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
@@ -1922,6 +2091,14 @@ packages:
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
+
+  string-width@4.2.3:
+    resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
+    engines: {node: '>=8'}
+
+  strip-ansi@6.0.1:
+    resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
+    engines: {node: '>=8'}
 
   strip-json-comments@3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
@@ -1972,6 +2149,10 @@ packages:
   undici-types@6.20.0:
     resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
+  universalify@2.0.1:
+    resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
+    engines: {node: '>= 10.0.0'}
+
   update-browserslist-db@1.1.1:
     resolution: {integrity: sha512-R8UzCaa9Az+38REPiJ1tXlImTJXlVfgHZsglwBD/k6nj76ctsH1E3q4doGrukiLQd3sGQYu56r5+lo5r94l29A==}
     hasBin: true
@@ -2001,6 +2182,16 @@ packages:
       '@types/react':
         optional: true
 
+  uuid@10.0.0:
+    resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
+    hasBin: true
+
+  vite-plugin-static-copy@2.3.0:
+    resolution: {integrity: sha512-LLKwhhHetGaCnWz4mas4qqjjguDka6/6b4+SeIohRroj8aCE7QTfiZECfPecslFQkWZ3HdQuq5kOPmWZjNYlKA==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      vite: ^5.0.0 || ^6.0.0
+
   vite-plugin-stylex@0.13.0:
     resolution: {integrity: sha512-kT44CpS8dprH+Idiff9eblsVoGCiRueRJwT6EdM7E+mbdSfHjqWI5e0kiaNebdsaacHiyhmkgPXeTfJahTXrsA==}
     peerDependencies:
@@ -2010,6 +2201,16 @@ packages:
     peerDependenciesMeta:
       react-strict-dom:
         optional: true
+
+  vite-plugin-top-level-await@1.5.0:
+    resolution: {integrity: sha512-r/DtuvHrSqUVk23XpG2cl8gjt1aATMG5cjExXL1BUTcSNab6CzkcPua9BPEc9fuTP5UpwClCxUe3+dNGL0yrgQ==}
+    peerDependencies:
+      vite: '>=2.8'
+
+  vite-plugin-wasm@3.4.1:
+    resolution: {integrity: sha512-ja3nSo2UCkVeitltJGkS3pfQHAanHv/DqGatdI39ja6McgABlpsZ5hVgl6wuR8Qx5etY3T5qgDQhOWzc5RReZA==}
+    peerDependencies:
+      vite: ^2 || ^3 || ^4 || ^5 || ^6
 
   vite@6.0.3:
     resolution: {integrity: sha512-Cmuo5P0ENTN6HxLSo6IHsjCLn/81Vgrp81oaiFFMRa8gGDj5xEjIcEpf2ZymZtZR8oU0P2JX5WuUp/rlXcHkAw==}
@@ -2060,8 +2261,24 @@ packages:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
 
+  wrap-ansi@7.0.0:
+    resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}
+    engines: {node: '>=10'}
+
+  y18n@5.0.8:
+    resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
+    engines: {node: '>=10'}
+
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
+
+  yargs-parser@21.1.1:
+    resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
+    engines: {node: '>=12'}
+
+  yargs@17.7.2:
+    resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
+    engines: {node: '>=12'}
 
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
@@ -2199,7 +2416,7 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@controlkit/accordion@0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/accordion@0.2.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-accordion': 1.2.1(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2209,7 +2426,7 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/alert-dialog@1.0.0-alpha.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/alert-dialog@1.0.0-beta.3(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-alert-dialog': 1.1.2(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2219,13 +2436,13 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/alert@0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/alert@0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@controlkit/aspect-ratio@0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/aspect-ratio@0.2.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-aspect-ratio': 1.1.0(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2235,7 +2452,7 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/avatar@0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/avatar@0.4.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-avatar': 1.1.1(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2245,19 +2462,19 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/badge@0.2.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/badge@0.3.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@controlkit/breadcrumb@0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/breadcrumb@0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@controlkit/button@0.4.0(@stylexjs/stylex@0.9.3)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/button@0.5.1(@stylexjs/stylex@0.9.3)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-slot': 1.1.0(@types/react@19.0.0)(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2266,13 +2483,13 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@controlkit/card@0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/card@0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@controlkit/checkbox@0.2.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/checkbox@0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-checkbox': 1.1.2(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2282,7 +2499,7 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/collapsible@0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/collapsible@0.2.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-collapsible': 1.1.1(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2292,15 +2509,15 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/color-picker@0.2.0(@controlkit/input@0.2.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/color-picker@0.3.1(@controlkit/input@0.3.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      '@controlkit/input': 0.2.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/input': 0.3.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-colorful: 5.6.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react-dom: 19.0.0(react@19.0.0)
 
-  '@controlkit/dialog@0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/dialog@1.0.0-beta.2(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-dialog': 1.1.2(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2310,7 +2527,7 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/divider@0.2.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/divider@0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-separator': 1.1.0(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2320,7 +2537,7 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/dropdown-menu@0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/dropdown-menu@0.2.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-dropdown-menu': 2.1.2(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2330,13 +2547,13 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/headings@0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/headings@0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@controlkit/hover-card@0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/hover-card@0.2.2(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-hover-card': 1.1.2(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2346,19 +2563,19 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/icons@0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/icons@0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@controlkit/input@0.2.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/input@0.3.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@controlkit/label@0.2.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/label@0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-label': 2.1.0(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2368,25 +2585,25 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/link@0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/link@0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@controlkit/loading@0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/loading@0.2.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@controlkit/lozenge@0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/lozenge@0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@controlkit/popover@0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/popover@0.2.2(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-popover': 1.1.2(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2396,7 +2613,7 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/progress-bar@0.2.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/progress-bar@0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-progress': 1.1.0(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2406,17 +2623,17 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/select@0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/select@0.2.2(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-select': 2.1.2(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-dom'
+    optionalDependencies:
+      '@types/react': 19.0.0
+      '@types/react-dom': 19.0.0
 
-  '@controlkit/sheet@0.2.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/sheet@0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-dialog': 1.1.2(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2426,13 +2643,13 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/skeleton@0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/skeleton@0.2.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@controlkit/switch@0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/switch@0.2.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-switch': 1.1.1(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2442,7 +2659,7 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/tabs@0.2.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/tabs@0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-tabs': 1.1.1(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2452,13 +2669,13 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/textarea@0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/textarea@0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@controlkit/tooltip@0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/tooltip@0.2.2(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@radix-ui/react-tooltip': 1.1.4(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stylexjs/stylex': 0.9.3
@@ -2468,41 +2685,41 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/ui@0.1.6(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/ui@0.2.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      '@controlkit/accordion': 0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/alert': 0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/alert-dialog': 1.0.0-alpha.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/aspect-ratio': 0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/avatar': 0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/badge': 0.2.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/breadcrumb': 0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/button': 0.4.0(@stylexjs/stylex@0.9.3)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/card': 0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/checkbox': 0.2.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/collapsible': 0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/color-picker': 0.2.0(@controlkit/input@0.2.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/dialog': 0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/divider': 0.2.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/dropdown-menu': 0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/headings': 0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/hover-card': 0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/icons': 0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/input': 0.2.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/label': 0.2.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/link': 0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/loading': 0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/lozenge': 0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/popover': 0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/progress-bar': 0.2.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/select': 0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/sheet': 0.2.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/skeleton': 0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/switch': 0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/tabs': 0.2.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/textarea': 0.1.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/tooltip': 0.1.0(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@controlkit/visually-hidden': 1.0.0-alpha.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/accordion': 0.2.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/alert': 0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/alert-dialog': 1.0.0-beta.3(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/aspect-ratio': 0.2.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/avatar': 0.4.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/badge': 0.3.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/breadcrumb': 0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/button': 0.5.1(@stylexjs/stylex@0.9.3)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/card': 0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/checkbox': 0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/collapsible': 0.2.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/color-picker': 0.3.1(@controlkit/input@0.3.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/dialog': 1.0.0-beta.2(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/divider': 0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/dropdown-menu': 0.2.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/headings': 0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/hover-card': 0.2.2(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/icons': 0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/input': 0.3.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/label': 0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/link': 0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/loading': 0.2.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/lozenge': 0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/popover': 0.2.2(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/progress-bar': 0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/select': 0.2.2(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/sheet': 0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/skeleton': 0.2.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/switch': 0.2.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/tabs': 0.3.1(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/textarea': 0.2.1(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/tooltip': 0.2.2(@stylexjs/stylex@0.9.3)(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@controlkit/visually-hidden': 1.0.2(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@radix-ui/react-accordion': 1.2.1(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@radix-ui/react-alert-dialog': 1.1.2(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@radix-ui/react-aspect-ratio': 1.1.0(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -2529,7 +2746,7 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@controlkit/visually-hidden@1.0.0-alpha.0(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@controlkit/visually-hidden@1.0.2(@stylexjs/stylex@0.9.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@stylexjs/stylex': 0.9.3
       react: 19.0.0
@@ -3247,6 +3464,10 @@ snapshots:
 
   '@radix-ui/rect@1.1.0': {}
 
+  '@rollup/plugin-virtual@3.0.2(rollup@4.28.0)':
+    optionalDependencies:
+      rollup: 4.28.0
+
   '@rollup/rollup-android-arm-eabi@4.28.0':
     optional: true
 
@@ -3322,6 +3543,58 @@ snapshots:
       css-mediaquery: 0.1.2
       invariant: 2.2.4
       styleq: 0.1.3
+
+  '@swc/core-darwin-arm64@1.11.5':
+    optional: true
+
+  '@swc/core-darwin-x64@1.11.5':
+    optional: true
+
+  '@swc/core-linux-arm-gnueabihf@1.11.5':
+    optional: true
+
+  '@swc/core-linux-arm64-gnu@1.11.5':
+    optional: true
+
+  '@swc/core-linux-arm64-musl@1.11.5':
+    optional: true
+
+  '@swc/core-linux-x64-gnu@1.11.5':
+    optional: true
+
+  '@swc/core-linux-x64-musl@1.11.5':
+    optional: true
+
+  '@swc/core-win32-arm64-msvc@1.11.5':
+    optional: true
+
+  '@swc/core-win32-ia32-msvc@1.11.5':
+    optional: true
+
+  '@swc/core-win32-x64-msvc@1.11.5':
+    optional: true
+
+  '@swc/core@1.11.5':
+    dependencies:
+      '@swc/counter': 0.1.3
+      '@swc/types': 0.1.19
+    optionalDependencies:
+      '@swc/core-darwin-arm64': 1.11.5
+      '@swc/core-darwin-x64': 1.11.5
+      '@swc/core-linux-arm-gnueabihf': 1.11.5
+      '@swc/core-linux-arm64-gnu': 1.11.5
+      '@swc/core-linux-arm64-musl': 1.11.5
+      '@swc/core-linux-x64-gnu': 1.11.5
+      '@swc/core-linux-x64-musl': 1.11.5
+      '@swc/core-win32-arm64-msvc': 1.11.5
+      '@swc/core-win32-ia32-msvc': 1.11.5
+      '@swc/core-win32-x64-msvc': 1.11.5
+
+  '@swc/counter@0.1.3': {}
+
+  '@swc/types@0.1.19':
+    dependencies:
+      '@swc/counter': 0.1.3
 
   '@types/babel__core@7.20.5':
     dependencies:
@@ -3475,9 +3748,16 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
+  ansi-regex@5.0.1: {}
+
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
+
+  anymatch@3.1.3:
+    dependencies:
+      normalize-path: 3.0.0
+      picomatch: 2.3.1
 
   argparse@2.0.1: {}
 
@@ -3486,6 +3766,8 @@ snapshots:
       tslib: 2.8.1
 
   balanced-match@1.0.2: {}
+
+  binary-extensions@2.3.0: {}
 
   brace-expansion@1.1.11:
     dependencies:
@@ -3515,6 +3797,24 @@ snapshots:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+
+  chokidar@3.6.0:
+    dependencies:
+      anymatch: 3.1.3
+      braces: 3.0.3
+      glob-parent: 5.1.2
+      is-binary-path: 2.1.0
+      is-glob: 4.0.3
+      normalize-path: 3.0.0
+      readdirp: 3.6.0
+    optionalDependencies:
+      fsevents: 2.3.3
+
+  cliui@8.0.1:
+    dependencies:
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+      wrap-ansi: 7.0.0
 
   color-convert@2.0.1:
     dependencies:
@@ -3549,6 +3849,8 @@ snapshots:
   detect-node-es@1.1.0: {}
 
   electron-to-chromium@1.5.70: {}
+
+  emoji-regex@8.0.0: {}
 
   esbuild@0.24.0:
     optionalDependencies:
@@ -3695,12 +3997,20 @@ snapshots:
 
   flatted@3.3.2: {}
 
+  fs-extra@11.3.0:
+    dependencies:
+      graceful-fs: 4.2.11
+      jsonfile: 6.1.0
+      universalify: 2.0.1
+
   fsevents@2.3.3:
     optional: true
 
   fuse.js@7.0.0: {}
 
   gensync@1.0.0-beta.2: {}
+
+  get-caller-file@2.0.5: {}
 
   get-nonce@1.0.1: {}
 
@@ -3717,6 +4027,8 @@ snapshots:
   globals@14.0.0: {}
 
   globals@15.13.0: {}
+
+  graceful-fs@4.2.11: {}
 
   graphemer@1.4.0: {}
 
@@ -3735,7 +4047,13 @@ snapshots:
     dependencies:
       loose-envify: 1.4.0
 
+  is-binary-path@2.1.0:
+    dependencies:
+      binary-extensions: 2.3.0
+
   is-extglob@2.1.1: {}
+
+  is-fullwidth-code-point@3.0.0: {}
 
   is-glob@4.0.3:
     dependencies:
@@ -3766,6 +4084,12 @@ snapshots:
 
   json5@2.2.3: {}
 
+  jsonfile@6.1.0:
+    dependencies:
+      universalify: 2.0.1
+    optionalDependencies:
+      graceful-fs: 4.2.11
+
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
@@ -3788,6 +4112,10 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  mediainfo.js@0.3.4:
+    dependencies:
+      yargs: 17.7.2
 
   merge2@1.4.1: {}
 
@@ -3812,6 +4140,8 @@ snapshots:
 
   node-releases@2.0.18: {}
 
+  normalize-path@3.0.0: {}
+
   optionator@0.9.4:
     dependencies:
       deep-is: 0.1.4
@@ -3828,6 +4158,8 @@ snapshots:
   p-locate@5.0.0:
     dependencies:
       p-limit: 3.1.0
+
+  p-map@7.0.3: {}
 
   parent-module@1.0.1:
     dependencies:
@@ -3907,6 +4239,12 @@ snapshots:
 
   react@19.0.0: {}
 
+  readdirp@3.6.0:
+    dependencies:
+      picomatch: 2.3.1
+
+  require-directory@2.1.1: {}
+
   resolve-from@4.0.0: {}
 
   reusify@1.0.4: {}
@@ -3955,6 +4293,16 @@ snapshots:
 
   source-map-js@1.2.1: {}
 
+  string-width@4.2.3:
+    dependencies:
+      emoji-regex: 8.0.0
+      is-fullwidth-code-point: 3.0.0
+      strip-ansi: 6.0.1
+
+  strip-ansi@6.0.1:
+    dependencies:
+      ansi-regex: 5.0.1
+
   strip-json-comments@3.1.1: {}
 
   styleq@0.1.3: {}
@@ -3994,6 +4342,8 @@ snapshots:
 
   undici-types@6.20.0: {}
 
+  universalify@2.0.1: {}
+
   update-browserslist-db@1.1.1(browserslist@4.24.2):
     dependencies:
       browserslist: 4.24.2
@@ -4019,6 +4369,17 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.0.0
 
+  uuid@10.0.0: {}
+
+  vite-plugin-static-copy@2.3.0(vite@6.0.3(@types/node@22.13.5)):
+    dependencies:
+      chokidar: 3.6.0
+      fast-glob: 3.3.2
+      fs-extra: 11.3.0
+      p-map: 7.0.3
+      picocolors: 1.1.1
+      vite: 6.0.3(@types/node@22.13.5)
+
   vite-plugin-stylex@0.13.0(@stylexjs/stylex@0.9.3)(vite@6.0.3(@types/node@22.13.5)):
     dependencies:
       '@babel/core': 7.26.0
@@ -4031,6 +4392,20 @@ snapshots:
       vite: 6.0.3(@types/node@22.13.5)
     transitivePeerDependencies:
       - supports-color
+
+  vite-plugin-top-level-await@1.5.0(rollup@4.28.0)(vite@6.0.3(@types/node@22.13.5)):
+    dependencies:
+      '@rollup/plugin-virtual': 3.0.2(rollup@4.28.0)
+      '@swc/core': 1.11.5
+      uuid: 10.0.0
+      vite: 6.0.3(@types/node@22.13.5)
+    transitivePeerDependencies:
+      - '@swc/helpers'
+      - rollup
+
+  vite-plugin-wasm@3.4.1(vite@6.0.3(@types/node@22.13.5)):
+    dependencies:
+      vite: 6.0.3(@types/node@22.13.5)
 
   vite@6.0.3(@types/node@22.13.5):
     dependencies:
@@ -4047,6 +4422,26 @@ snapshots:
 
   word-wrap@1.2.5: {}
 
+  wrap-ansi@7.0.0:
+    dependencies:
+      ansi-styles: 4.3.0
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+
+  y18n@5.0.8: {}
+
   yallist@3.1.1: {}
+
+  yargs-parser@21.1.1: {}
+
+  yargs@17.7.2:
+    dependencies:
+      cliui: 8.0.1
+      escalade: 3.2.0
+      get-caller-file: 2.0.5
+      require-directory: 2.1.1
+      string-width: 4.2.3
+      y18n: 5.0.8
+      yargs-parser: 21.1.1
 
   yocto-queue@0.1.0: {}

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import * as stylex from "@stylexjs/stylex";
 
 import { H1, Input, Label, H4, H3, Button } from "@controlkit/ui";
@@ -206,7 +206,7 @@ export default function YoutubeThumbnailGrabber() {
 					<Label>Youtube URL</Label>
 					<Input
 						value={url}
-						onChange={(e) => {
+						onChange={(e: ChangeEvent<HTMLInputElement>) => {
 							setUrl(e.target.value);
 
 							try {
